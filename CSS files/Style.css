@@ -1,0 +1,306 @@
+/* Global Rules  */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* TEXT COLORS */
+    /* (sub-heading at the top of the app UI) */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    /* (chat on the left) */
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    /* (chat on the right) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    /* (placeholder text) */
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    /* (main heading) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (paragraph) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+    /* BG COLOR (LINEAR GRADIENT) */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    /* SECONDARY COLORS  */
+    --White: hsl(0, 0%, 100%);
+    /* (app background) */
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* (submit button background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (radio button outline) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* ***************************************************** */
+body::before {
+    content: " ";
+    width: 500px;
+    height: 800px;
+    background: linear-gradient(200deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    position: absolute;
+    border-radius: 250px;
+    top: -250px;
+    left: -100px;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    top: 30px;
+    display: flex;
+    left: 25%;
+    align-items: center;
+}
+
+.container .text {
+    margin-left: 150px;
+}
+
+.container .text h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    width: 50%;
+}
+
+.container .text p {
+    width: 50%;
+    color: var(--Dark-Grayish-Violet);
+}
+
+.container .phone-bg {
+    width: 470px;
+    height: 580px;
+    border-radius: 25px;
+    background-color: var(--White);
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.container .phone-bg::before {
+    content: " ";
+    width: 150px;
+    height: 30px;
+    background-color: var(--White);
+    position: absolute;
+    z-index: 500;
+    left: 24%;
+    border-radius: 50px;
+}
+
+.container .phone-bg .chat-bg {
+    width: 90%;
+    height: 95%;
+    border-radius: 25px;
+    background-color: var(--Light-Grayish-Violet);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .phone-bg .chat-bg .chat-header {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(270deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container .phone-bg .chat-bg .chat-header i {
+    color: var(--White);
+    font-size: 12px;
+}
+
+.container .phone-bg .chat-bg .chat-header .profile {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.container .phone-bg .chat-bg .chat-header .profile img {
+    width: 15%;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+.container .phone-bg .chat-bg .chat-header .profile .name {
+    font-size: 12px;
+    margin-left: 5px;
+    color: var(--White);
+}
+
+.container .phone-bg .chat-bg .chat-header .profile .name h4 {
+    margin: 0;
+}
+
+.container .phone-bg .chat-bg .chat-header .profile .name span {
+    color: var(--Pale-Violet);
+}
+
+.container .phone-bg .chat-bg .chat {
+    transform: scale(0.9);
+    margin-top: -15px;
+}
+
+.container .phone-bg .chat-bg .chat p {
+    background-color: hsl(276deg 100% 81% / 25%);
+    border-radius: 15px 15px 15px 5px;
+    height: 40px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    padding-left: 5px;
+    color: var(--Moderate-Violet);
+}
+
+.container .phone-bg .chat-bg .chat p:nth-child(4) {
+    height: 55px;
+    width: 165px;
+}
+
+.container .phone-bg .chat-bg .chat .right {
+    text-align: end;
+    margin-right: 5px;
+}
+
+.container .phone-bg .chat-bg .chat .right img {
+    width: 20%;
+    border-radius: 15px;
+}
+
+.container .phone-bg .chat-bg .chat .right p {
+    text-align: start;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 32%;
+    color: var(--Desaturated-Dark-Violet);
+    background-color: var(--White);
+    border-radius: 15px 15px 5px 15px;
+}
+
+.container .phone-bg .chat-bg .chat .right p:nth-child(5) {
+    width: 100px;
+    height: 30px;
+    margin-left: 57%;
+}
+
+form {
+    height: 45px;
+    background: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 10px 10px 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+    font-size: 10px;
+    margin-right: 35px;
+}
+
+form span {
+    margin-right: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+form span:nth-child(3) {
+    font-weight: 800;
+}
+
+form span:first-child {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Very-Light-Magenta);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.form-2 label {
+    margin-right: 55px;
+}
+
+.input {
+    width: 100%;
+    background: var(--White);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.input input {
+    outline: none;
+    border: none;
+    margin-left: 20px;
+}
+
+.input input::placeholder {
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+}
+
+.input span {
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input span i {
+    color: white;
+    font-size: 15px;
+}
+
+
+@media (max-width: 767px) {
+    body {
+        overflow: visible;
+        height: 100vh;
+    }
+
+    body::before {
+        left: -75%;
+    }
+
+    .container {
+        left: 0;
+        top: 0;
+        gap: 50px;
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .container .phone-bg {
+        width: 100%;
+        height: 612px;
+    }
+
+    .container .text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .container .text h1,
+    .container .text p {
+        width: 100%;
+    }
+}
